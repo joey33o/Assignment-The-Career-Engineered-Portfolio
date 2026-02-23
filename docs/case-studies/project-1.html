@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Case Study: Full-Stack Web Application — Joseph Martinez, NJIT IT Student."
+    />
+    <meta name="author" content="Joseph Martinez" />
+    <title>Full-Stack Web App | Joseph Martinez</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+  <body>
+    <!-- ===================== NAV ===================== -->
+    <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../index.html"
+          >JM<span class="text-accent">.</span></a
+        >
+        <div class="ms-auto">
+          <a
+            href="../index.html#portfolio"
+            class="btn btn-outline-accent btn-sm"
+          >
+            <i class="bi bi-arrow-left me-1"></i>Back to Portfolio
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ===================== CASE STUDY HERO ===================== -->
+    <header class="cs-hero">
+      <div class="container">
+        <p class="section-eyebrow text-accent mb-2">Case Study</p>
+        <h1 class="section-title mb-3">Full-Stack Web Application</h1>
+        <div class="tech-tags mb-4">
+          <span class="badge badge-tech">JavaScript</span>
+          <span class="badge badge-tech">Node.js</span>
+          <span class="badge badge-tech">Express</span>
+          <span class="badge badge-tech">HTML</span>
+          <span class="badge badge-tech">GitHub Actions</span>
+          <span class="badge badge-tech">CI/CD</span>
+        </div>
+        <p class="cs-body">
+          A full-stack web application built to learn and demonstrate how
+          front-end interfaces communicate with a back-end server — using
+          Node.js, Express, and an automated deployment pipeline.
+        </p>
+        <a
+          href="https://github.com/joey33o/InternetApp-Assigment3"
+          target="_blank"
+          rel="noopener"
+          class="btn btn-outline-accent mt-3"
+        >
+          <i class="bi bi-github me-1"></i>View on GitHub
+        </a>
+      </div>
+    </header>
+
+    <!-- ===================== PROBLEM ===================== -->
+    <section class="cs-section">
+      <div class="container">
+        <p class="cs-label">01 — Problem</p>
+        <h2 class="cs-heading">What was the challenge?</h2>
+        <p class="cs-body">
+          Many web development courses focus on front-end or back-end in
+          isolation, leaving students without a clear picture of how both sides
+          integrate in a real application. The challenge was to build a
+          cohesive, working web application where a dynamic front end
+          communicates meaningfully with a server — handling routes, responses,
+          and data flow — while also establishing a repeatable, automated
+          deployment process rather than relying on manual steps every release.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== ACTION ===================== -->
+    <section class="cs-section">
+      <div class="container">
+        <p class="cs-label">02 — Action</p>
+        <h2 class="cs-heading">What did you do?</h2>
+        <p class="cs-body">
+          Built the server layer using <strong>Node.js</strong> and
+          <strong>Express</strong>, defining RESTful routes to handle incoming
+          requests and serve dynamic responses to the front end. Structured the
+          project with separate <code>src/</code> and
+          <code>server/</code> directories to enforce a clean separation of
+          concerns between client and server code. Configured a
+          <strong>GitHub Actions CI/CD workflow</strong> (`.github/workflows/`)
+          to automatically run builds on every push, ensuring the application
+          could be deployed consistently without manual intervention. Used
+          <code>.vscode/</code> workspace settings to standardize the
+          development environment across contributors.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== RESULT ===================== -->
+    <section class="cs-section">
+      <div class="container">
+        <p class="cs-label">03 — Result</p>
+        <h2 class="cs-heading">What was the outcome?</h2>
+        <p class="cs-body">
+          Delivered a functional full-stack web application with a working
+          Node.js/Express server, front-end HTML interface, and an automated
+          CI/CD pipeline — all within a single project. Gained hands-on
+          experience with full-stack architecture patterns, RESTful design, and
+          DevOps fundamentals that directly translate to industry workflows. The
+          automated pipeline eliminated manual deployment overhead entirely, a
+          practice now standard across professional engineering teams.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== BACK CTA ===================== -->
+    <section class="cs-section">
+      <div class="container text-center">
+        <a href="../index.html#portfolio" class="btn btn-accent btn-lg">
+          <i class="bi bi-arrow-left me-1"></i>Back to All Projects
+        </a>
+      </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer-section">
+      <div class="container">
+        <p class="footer-copy text-center mb-0">
+          &copy; 2026 Joseph Martinez &mdash; NJIT Information Technology
+          Student
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>

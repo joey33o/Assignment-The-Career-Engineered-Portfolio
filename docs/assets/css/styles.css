@@ -1,0 +1,494 @@
+/* =============================================
+   Portfolio — styles.css
+   Palette: Blue #3B82F6 | Navy #070c18 | Cool White #f0f6ff
+   ============================================= */
+
+/* --- Variables --- */
+:root {
+  --primary: #3b82f6;
+  --primary-dim: #2563eb;
+  --primary-glow: rgba(59, 130, 246, 0.15);
+  --bg-900: #070c18;
+  --bg-800: #0d1626;
+  --bg-700: #1a2540;
+  --bg-600: #243050;
+  --text-400: #6b80a0;
+  --text-200: #b8c9e0;
+  --white: #f0f6ff;
+  --font-main: "Inter", sans-serif;
+  --transition: 0.25s ease;
+}
+
+/* --- Global --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-900);
+  color: var(--white);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.text-accent {
+  color: var(--primary) !important;
+}
+
+/* --- Nav --- */
+.navbar {
+  background-color: rgba(7, 12, 24, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(59, 130, 246, 0.15);
+  padding-top: 0.85rem;
+  padding-bottom: 0.85rem;
+  transition: background-color var(--transition);
+}
+
+.navbar-brand {
+  font-size: 1.4rem;
+  letter-spacing: 0.04em;
+  color: var(--white) !important;
+}
+
+.nav-link {
+  color: var(--text-200) !important;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  padding: 0.4rem 0.75rem !important;
+  transition: color var(--transition);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary) !important;
+}
+
+.btn-outline-accent {
+  border: 1.5px solid var(--primary);
+  color: var(--primary);
+  background: transparent;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.35rem 1rem;
+  border-radius: 4px;
+  transition:
+    background-color var(--transition),
+    color var(--transition);
+}
+
+.btn-outline-accent:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+/* --- Hero --- */
+.hero-section {
+  min-height: 100vh;
+  padding: 8rem 0 5rem;
+  background: linear-gradient(
+    135deg,
+    var(--bg-900) 0%,
+    var(--bg-800) 60%,
+    rgba(59, 130, 246, 0.05) 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: -200px;
+  right: -200px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    circle,
+    rgba(59, 130, 246, 0.1) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.hero-eyebrow {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hero-headline {
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--white);
+}
+
+.hero-sub {
+  font-size: 1.1rem;
+  color: var(--text-200);
+  max-width: 540px;
+  line-height: 1.75;
+}
+
+.btn-accent {
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition:
+    background-color var(--transition),
+    transform var(--transition);
+}
+
+.btn-accent:hover {
+  background-color: var(--primary-dim);
+  color: var(--white);
+  transform: translateY(-1px);
+}
+
+/* Headshot */
+.headshot-wrapper {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  border: 3px solid var(--primary);
+  padding: 5px;
+  background: var(--bg-800);
+  box-shadow: 0 0 40px rgba(59, 130, 246, 0.2);
+}
+
+.headshot-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 991px) {
+  .headshot-wrapper {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* --- Section Shared --- */
+.section-wrapper {
+  padding: 6rem 0;
+}
+
+.section-dark {
+  background-color: var(--bg-800);
+}
+
+.section-eyebrow {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+
+.section-sub {
+  color: var(--text-200);
+  font-size: 1rem;
+  max-width: 560px;
+}
+
+/* --- Project Cards --- */
+.project-card {
+  background-color: var(--bg-700);
+  border: 1px solid var(--bg-600);
+  border-radius: 10px;
+  padding: 1.75rem;
+  transition:
+    border-color var(--transition),
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.project-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.15);
+}
+
+.project-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 0.75rem;
+}
+
+.badge-tech {
+  background-color: rgba(59, 130, 246, 0.12);
+  color: var(--primary);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.3em 0.65em;
+  border-radius: 4px;
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
+  display: inline-block;
+}
+
+.project-impact {
+  color: var(--text-200);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.btn-accent-outline {
+  border: 1.5px solid var(--primary);
+  color: var(--primary);
+  background: transparent;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  transition:
+    background-color var(--transition),
+    color var(--transition);
+}
+
+.btn-accent-outline:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+/* --- Footer --- */
+.footer-section {
+  background-color: var(--bg-900);
+  border-top: 1px solid var(--bg-600);
+  padding: 4rem 0 2.5rem;
+}
+
+.footer-cta {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 0.4rem;
+}
+
+.footer-sub {
+  color: var(--text-200);
+  font-size: 0.95rem;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--text-200);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--bg-600);
+  border-radius: 6px;
+  transition:
+    color var(--transition),
+    border-color var(--transition),
+    background-color var(--transition);
+}
+
+.social-link:hover {
+  color: var(--white);
+  border-color: var(--primary);
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+.footer-divider {
+  border-color: var(--bg-600);
+  margin: 2rem 0 1.5rem;
+}
+
+.footer-copy {
+  color: var(--text-400);
+  font-size: 0.82rem;
+}
+
+/* --- Case Study Page --- */
+.cs-hero {
+  padding: 8rem 0 4rem;
+  background: linear-gradient(135deg, var(--bg-900), var(--bg-800));
+  border-bottom: 1px solid var(--bg-600);
+}
+
+.cs-section {
+  padding: 4rem 0;
+}
+
+.cs-section + .cs-section {
+  border-top: 1px solid var(--bg-600);
+}
+
+.cs-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.cs-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.cs-body {
+  color: var(--text-200);
+  font-size: 1rem;
+  line-height: 1.8;
+  max-width: 720px;
+}
+
+/* --- Navbar brand responsive --- */
+.navbar-brand {
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+}
+
+/* --- Code Window --- */
+.code-window {
+  background-color: var(--bg-800);
+  border: 1px solid var(--bg-600);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow:
+    0 16px 48px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(59, 130, 246, 0.1);
+  font-size: 0.88rem;
+}
+
+.code-window-bar {
+  background-color: var(--bg-700);
+  border-bottom: 1px solid var(--bg-600);
+  padding: 0.65rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.code-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.dot-red {
+  background-color: #ff5f57;
+}
+.dot-yellow {
+  background-color: #febc2e;
+}
+.dot-green {
+  background-color: #28c840;
+}
+
+.code-window-title {
+  margin-left: 0.6rem;
+  font-size: 0.78rem;
+  color: var(--text-400);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+}
+
+.code-body {
+  padding: 1.5rem 1.75rem;
+  overflow-x: auto;
+}
+
+.code-body pre {
+  margin: 0;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.85rem;
+  line-height: 1.75;
+  color: var(--text-200);
+  white-space: pre;
+}
+
+.code-body code {
+  background: none;
+  padding: 0;
+}
+
+/* Syntax tokens */
+.c-keyword {
+  color: #7dd3fc;
+} /* light blue — const, true */
+.c-var {
+  color: #e2e8f0;
+} /* near-white — developer */
+.c-fn {
+  color: #93c5fd;
+} /* blue — ship */
+.c-key {
+  color: #bfdbfe;
+} /* pale blue — object keys */
+.c-str {
+  color: #86efac;
+} /* green — strings */
+.c-comment {
+  color: var(--text-400);
+  font-style: italic;
+} /* muted */
+.c-op {
+  color: #94a3b8;
+} /* slate — = */
+.c-punct {
+  color: #94a3b8;
+} /* slate — { } [ ] , ; . */
+
+/* Blinking cursor */
+.c-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background-color: var(--primary);
+  vertical-align: text-bottom;
+  margin-left: 1px;
+  animation: blink 1.1s step-start infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* --- Utility --- */
+@media (max-width: 575px) {
+  .section-wrapper {
+    padding: 4rem 0;
+  }
+  .hero-section {
+    padding: 7rem 0 4rem;
+  }
+}
